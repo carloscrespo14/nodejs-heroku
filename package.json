@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node src/index.js"
+    "start": "node src/index.js",
+    "dev":"nodemon src/index.js"
   },
   "author": "carlos crespo",
   "license": "MIT",
@@ -12,5 +13,8 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.3.12"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
   }
 }

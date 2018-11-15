@@ -10,6 +10,10 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
+//middlewares
+app.use('/api', require('./routes/listas.routes'));
+
 //server listening
 
 app.use(express.static(path.join(__dirname, 'public')))

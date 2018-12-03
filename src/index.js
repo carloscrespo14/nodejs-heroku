@@ -1,16 +1,17 @@
 'use strict'
-
+const cors = require('cors')
 const mongoose = require('mongoose')
 const express = require('express')
 const bodyParser = require('body-parser')
 const config = require('./settings/config')
 const path = require('path');
+
 const app = express();
 
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
+app.use(cors());
 //middlewares
 app.use('/api', require('./routes/listas.routes'));
 
